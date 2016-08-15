@@ -6,11 +6,11 @@ import "rxjs/add/operator/map";
 
 @Component({
   selector : "myApp",
-  styleUrls : ["../assets/css/bootstrap.min.css", "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons"],
+  styleUrls : ["../assets/css/bootstrap.min.css"],
   template : `
-  <navbar></navbar>
+  <navbar [viewValue]="mode"></navbar>
   <div class="container">
-    <div class="row" [ngSwitch]="ViewMode">
+    <div class="row" [ngSwitch]="mode">
       <template [ngSwitchCase]="'timeline'">
         <timeline></timeline>
       </template>
@@ -24,5 +24,10 @@ import "rxjs/add/operator/map";
   directives : [TimelineComponent, NavbarComponent]
 })
 export class AppComponent{
-    ViewMode = "timeline"
+    mode = 'timeline';
+
+    ViewMode($event){
+        console.log($event);
+        
+    }
  }

@@ -11,7 +11,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var NavbarComponent = (function () {
     function NavbarComponent() {
+        this.onMenuChange = new core_1.EventEmitter();
     }
+    NavbarComponent.prototype.viewMode = function (value) {
+        this.viewValue = value;
+        this.onMenuChange.emit({ mode: value });
+    };
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', String)
+    ], NavbarComponent.prototype, "viewValue", void 0);
+    __decorate([
+        core_1.Output(), 
+        __metadata('design:type', Object)
+    ], NavbarComponent.prototype, "onMenuChange", void 0);
     NavbarComponent = __decorate([
         core_1.Component({
             moduleId: module.id,

@@ -1,4 +1,4 @@
-import { Component, Input, Output } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
     moduleId : module.id,
@@ -7,5 +7,11 @@ import { Component, Input, Output } from '@angular/core';
     //template : ``
 })
 export class NavbarComponent{
-    viewMode;
+    @Input() viewValue : string;
+    @Output() onMenuChange = new EventEmitter();
+
+    viewMode(value){
+        this.viewValue = value;
+        this.onMenuChange.emit({mode : value});
+    }
 }

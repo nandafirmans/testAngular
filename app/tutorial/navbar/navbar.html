@@ -12,13 +12,13 @@
 
         <div class="collapse navbar-collapse" id="example-navbar-primary">
             <ul class="nav navbar-nav navbar-right">
-                <li [class.active]="viewMode == 'timeline'">
-                    <a href="#!" (click)="viewMode == 'timeline'">
+                <li [class.active]="viewValue == 'timeline'">
+                    <a href="#!" (click)="viewMode('timeline')">
                         <i class="material-icons">explore</i> Timeline
                     </a>
                 </li>
-                <li [class.active]="viewMode == 'profile'">
-                    <a href="#!" (click)="viewMode == 'profile'">
+                <li [class.active]="viewValue == 'profile'">
+                    <a href="#!" (click)="viewMode('profile')">
                         <i class="material-icons">account_circle</i> Profile
                         <div class="ripple-container"></div>
                     </a>
