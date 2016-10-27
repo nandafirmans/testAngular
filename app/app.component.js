@@ -9,23 +9,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var timeline_component_1 = require('./tutorial/timeline/timeline.component');
-var navbar_component_1 = require('./tutorial/navbar/navbar.component');
-require("rxjs/add/operator/map");
 var AppComponent = (function () {
     function AppComponent() {
-        this.mode = 'timeline';
     }
-    AppComponent.prototype.ViewMode = function ($event) {
-        console.log($event);
-    };
     AppComponent = __decorate([
         core_1.Component({
-            selector: "myApp",
-            styleUrls: ["../assets/css/bootstrap.min.css"],
-            template: "\n  <navbar [viewValue]=\"mode\"></navbar>\n  <div class=\"container\">\n    <div class=\"row\" [ngSwitch]=\"mode\">\n      <template [ngSwitchCase]=\"'timeline'\">\n        <timeline></timeline>\n      </template>\n      <template [ngSwitchCase]=\"'profile'\">\n        <h3 class=\"text-center\"> This should be profile page</h3>\n      </template>\n    </div>\n  </div>\n  ",
-            encapsulation: core_1.ViewEncapsulation.None,
-            directives: [timeline_component_1.TimelineComponent, navbar_component_1.NavbarComponent]
+            selector: 'my-app',
+            template: '<h1>Jancokkk</h1>'
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
